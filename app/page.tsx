@@ -1,7 +1,8 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
 import { listing } from "@/lib/listings/mapp-flat801b";
+import { Gallery } from "@/app/components/Gallery";
+import fs from "fs";
+import path from "path";
 
 type GalleryImage = {
   src: string;
@@ -33,6 +34,7 @@ function getGalleryImages(): GalleryImage[] {
 export default function Home() {
   const whatsappUrl = listing.whatsappUrl ?? listing.airbnbUrl;
   const galleryImages = getGalleryImages();
+  const heroBackground = (galleryImages[2] ?? listing.photos[0])?.src;
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-50">
@@ -150,7 +152,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-6 pt-4 text-xs text-neutral-400">
-              {listing.highlights.slice(0, 4).map((h) => (
+              {listing.highlights.slice(0, 5).map((h) => (
                 <div key={h} className="space-y-1">
                   <p className="font-semibold text-neutral-200">{h}</p>
                   <p className="text-neutral-400/90">—</p>
@@ -160,8 +162,18 @@ export default function Home() {
           </div>
 
           <div className="relative h-[260px] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-sky-500/20 via-emerald-400/10 to-neutral-900 p-1.5 shadow-[0_35px_120px_rgba(34,197,94,0.18)] sm:h-[320px]">
-            <div className="absolute inset-6 rounded-3xl bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.45),_transparent_55%)] blur-2xl" />
-            <div className="relative flex h-full flex-col justify-between rounded-2xl bg-neutral-950/70 p-5 backdrop-blur">
+            {heroBackground && (
+              <Image
+                src={heroBackground}
+                alt={listing.name}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 480px"
+                className="object-cover opacity-40"
+              />
+            )}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.45),_transparent_55%)]" />
+            <div className="relative flex h-full flex-col justify-between rounded-2xl bg-neutral-950/50 p-5">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs text-neutral-400">Acomodação</p>
@@ -347,25 +359,9 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {(galleryImages.length ? galleryImages : listing.photos).map((p) => (
-              <figure
-                key={p.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5"
-              >
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                <figcaption className="absolute bottom-2 left-2 rounded-full bg-black/45 px-2 py-1 text-[11px] text-neutral-100 backdrop-blur">
-                  {p.alt}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <Gallery
+            images={galleryImages.length ? galleryImages : listing.photos}
+          />
         </section>
 
         {/* O que esse lugar oferece */}

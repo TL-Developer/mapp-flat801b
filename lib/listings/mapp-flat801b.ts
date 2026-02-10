@@ -35,13 +35,13 @@ export type Listing = {
 // Airbnb usually blocks automated access, so this file is intentionally
 // "data-driven": you paste the info (and photo URLs) here.
 export const listing: Listing = {
-  name: "Mapp Rio Flat 801 B",
+  name: "Mapp Rio • Flat 801B",
   tagline: "Hospedagem premium • Estadia curta e média duração",
   locationLine: "São Paulo • Centro • Brasil",
   airbnbUrl: "https://airbnb.com.br/h/mapp-flat801b",
   // Troque pelo seu número real se quiser CTA direto no WhatsApp.
   whatsappUrl:
-    "https://wa.me/5548999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20me%20hospedar%20em%20um%20MAPP.",
+    "https://wa.me/5515991069958?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20me%20hospedar%20em%20um%20MAPP.",
   instagramUrl: "https://www.instagram.com/flat.801b/",
   description: [
     "Bem-vindo ao Mapp Rio Flat 801 B.",
@@ -52,6 +52,7 @@ export const listing: Listing = {
     "Check-in prático (autônomo, se aplicável)",
     "Wi‑Fi de alta velocidade",
     "Enxoval e limpeza profissional",
+    "Escritório no local",
   ],
   amenityGroups: [
     {

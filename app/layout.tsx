@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Mapp Rio Flat 801 B",
   description:
     "Mapp Rio Flat 801 B — site informativo com galeria, comodidades e link oficial de reserva no Airbnb.",
+  icons: {
+    icon: "/images/logo.jpg",
+  },
 };
 
 export default function RootLayout({

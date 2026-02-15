@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Mapp Rio Flat 801 B — site informativo com galeria, comodidades e link oficial de reserva no Airbnb.",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: "/images/favicon.ico",
   },
 };
 
@@ -29,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+        <meta name="description" content="Mapp Rio Flat 801 B — site informativo com galeria, comodidades e link oficial de reserva no Airbnb." />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-50`}
       >

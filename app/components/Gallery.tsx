@@ -42,7 +42,7 @@ export function Gallery({ images }: GalleryProps) {
             key={p.src}
             type="button"
             onClick={() => setOpenIndex(index)}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left"
+            className="group cursor-pointer relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-left"
           >
             <Image
               src={p.src}
@@ -71,7 +71,7 @@ export function Gallery({ images }: GalleryProps) {
             <button
               type="button"
               onClick={() => setOpenIndex(null)}
-              className="absolute right-3 top-3 z-10 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-neutral-100 hover:bg-black"
+              className="absolute cursor-pointer right-3 top-3 z-10 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-neutral-100 hover:bg-black"
             >
               Fechar
             </button>

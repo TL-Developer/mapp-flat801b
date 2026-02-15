@@ -341,12 +341,7 @@ export default function Home() {
             <div className="space-y-1">
               <h2 className="text-lg font-semibold sm:text-xl">Fotos</h2>
               <p className="max-w-2xl text-sm text-neutral-300">
-                Galeria do {listing.name}. As imagens são carregadas
-                automaticamente de{" "}
-                <span className="font-medium text-neutral-200">
-                  public/images/
-                </span>{" "}
-                (formatos JPEG/AVIF/PNG/WebP).
+                Galeria do {listing.name}.
               </p>
             </div>
             <a
@@ -475,6 +470,13 @@ export default function Home() {
               </article>
 
               <article className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <h3 className="text-sm font-semibold text-neutral-100">Condomínio</h3>
+                <ul className="mt-2 space-y-1 text-[12px] text-neutral-300">
+                  <li>Mini Mercado Market4you</li>
+                </ul>
+              </article>
+
+              <article className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <h3 className="text-sm font-semibold text-neutral-100">
                   Estacionamento e instalações
                 </h3>
@@ -483,6 +485,7 @@ export default function Home() {
                   <li>Elevador (cabine ampla e porta larga)</li>
                   <li>Academia privativa no prédio</li>
                   <li>Estacionamento pago fora da propriedade</li>
+                  <li>Ventiladores no apartamento</li>
                 </ul>
               </article>
 

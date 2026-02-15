@@ -37,7 +37,7 @@ export type Listing = {
 export const listing: Listing = {
   name: "Mapp Rio • Flat 801B",
   tagline: "Hospedagem premium • Estadia curta e média duração",
-  locationLine: "São Paulo • Centro • Brasil",
+  locationLine: "São Paulo • Reública • Centro • Brasil",
   airbnbUrl: "https://airbnb.com.br/h/mapp-flat801b",
   // Troque pelo seu número real se quiser CTA direto no WhatsApp.
   whatsappUrl:
@@ -57,7 +57,7 @@ export const listing: Listing = {
   amenityGroups: [
     {
       title: "Conforto",
-      items: ["Ar-condicionado", "Cama confortável", "Roupa de cama e banho"],
+      items: ["Ar-condicionado", "Cama confortável", "Roupa de cama e banho", "Ventiladores"],
     },
     {
       title: "Cozinha & lavanderia",
@@ -66,6 +66,10 @@ export const listing: Listing = {
     {
       title: "Tecnologia",
       items: ["Wi‑Fi", "Smart TV / streaming"],
+    },
+    {
+      title: "Comodidades próximas",
+      items: ["Mini mercado Market4You"],
     },
   ],
   houseRules: [

@@ -39,6 +39,17 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-NWZC3PHW');`}
         </script>
         {/* End Google Tag Manager */}
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KVFCX9E1J"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-1KVFCX9E1J');`}
+        </script>
+        
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
         <meta name="description" content="Mapp Rio Flat 801 B — site informativo com galeria, comodidades e link oficial de reserva no Airbnb." />
       </head>
